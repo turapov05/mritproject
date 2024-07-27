@@ -5,10 +5,21 @@
     <title>O'quvchilar ro'yxati</title>
 </head>
 <body>
-<h1>o'quvchilar ro'yxati</h1>
-{% for i in index %}
-<p>{{ i }}
-</p>
-{% endfor %}
+<table>
+  <tr>
+    <th>ism</th>
+    <th>familiya</th>
+    <th>raqami</th>
+  </tr>
+    {% for i in index %}
+  <tr>
+
+    <td>{{ i.first_name }}</td>
+    <td>{{ i.last_name }}</td>
+    <td>{{ i.phone_number }}</td>
+
+  </tr>
+    {% endfor %}
+</table>
 </body>
 </html>
