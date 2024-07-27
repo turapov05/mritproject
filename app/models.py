@@ -10,4 +10,4 @@ class Index(models.Model):
     phone_number = models.IntegerField(max_length=13)
 
     def __str__(self):
-        return self.first_name
+        return f"Ismi:{self.last_name}    Familiyasi:{self.last_name}    telefon raqami:{self.phone_number}"
