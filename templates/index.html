@@ -10,13 +10,18 @@
     <th>ism</th>
     <th>familiya</th>
     <th>raqami</th>
+    <th>photos</th>
+
   </tr>
     {% for i in index %}
   <tr>
 
-    <td>{{ i.first_name }}</td>
+
+     <td>{{ i.first_name }} </td>
     <td>{{ i.last_name }}</td>
     <td>{{ i.phone_number }}</td>
+     <td><img width="101px" src="{{ i.photos }}" alt="IMG"></td>
+
 
   </tr>
     {% endfor %}
