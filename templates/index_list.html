@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index List</title>
+</head>
+<body>
+    <h1>Index List</h1>
+    <ul>
+        {% for index in index %}
+            <li><a href="{% url 'index_detail' index.pk %}">{{ index.first_name }} {{ index.last_name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index_create' %}">Add New Index</a>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index Detail</title>
+</head>
+<body>
+    <h1>{{ index.first_name }} {{ index.last_name }}</h1>
+    <p>Phone Number: {{ index.phone_number }}</p>
+    <p>Photo: <img style="width: 70px; height: 80px; border-radius: 25px;" src="{{ index.photos.url }}" alt="Photo of {{ index.first_name }}"></p>
+    <a href="{% url 'index_update' index.pk %}">Edit</a> <br>
+    <a href="{% url 'index_delete' index.pk %}">Delete</a> <br>
+    <a href="{% url 'index_list' %}">Back to Index List</a>
+</body>
+</html>
